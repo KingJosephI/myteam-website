@@ -153,4 +153,12 @@ input::placeholder {
     color: #ffffff;
     font-weight: 600;
   }
+}
+@media screen and (max-width: 23.4375rem) {
+  .delivering {
+    background-color: #004047;
+    padding-block: 9.375rem;
+    padding-inline: 1.25rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

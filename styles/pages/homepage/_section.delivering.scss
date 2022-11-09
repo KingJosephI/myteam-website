@@ -1,0 +1,10 @@
+@use '../../abstracts/' as *;
+
+@media screen and (max-width: rem(375)) {
+  .delivering {
+    background-color: $deep-jungle-blue;
+    padding-block: rem(150);
+    padding-inline: $mobile-padding-inline;
+    text-align: center;
+  }
+}
