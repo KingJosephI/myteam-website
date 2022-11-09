@@ -82,16 +82,13 @@ input::placeholder {
 }
 @media screen and (max-width: 23.4375rem) {
   .hero {
+    background-image: url("../../../assets/bg-pattern-home-2.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
     text-align: center;
     color: #ffffff;
     padding-inline: 1.25rem;
-    -webkit-padding-before: 5rem;
-            padding-block-start: 5rem;
-    -webkit-padding-after: 12.5rem;
-            padding-block-end: 12.5rem;
-    background-image: url("../../../assets/bg-pattern-home-2.svg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
+    padding-block: 5rem 12.5rem;
   }
   .hero__title {
     font-size: 2.5rem;
@@ -108,5 +105,25 @@ input::placeholder {
     font-size: 0.9375rem;
     line-height: 1.75rem;
     font-weight: 600;
+  }
+}
+@media screen and (max-width: 23.4375rem) {
+  .build {
+    background-image: url("../../../assets/bg-pattern-home-3.svg");
+    background-position: top right -6.25rem;
+    background-repeat: no-repeat;
+    background-color: #012f34;
+    padding-inline: 1.25rem;
+    padding-block: 3.8125rem;
+  }
+  .build__heading {
+    -webkit-padding-after: 3.5rem;
+            padding-block-end: 3.5rem;
+  }
+  .build__title {
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 13.75rem;
   }
 }/*# sourceMappingURL=main.css.map */

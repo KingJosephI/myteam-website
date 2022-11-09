@@ -1,0 +1,24 @@
+@use '../../abstracts/' as *;
+
+@media screen and (max-width: rem(375)) {
+  .build {
+    @include back-image(
+      '../../../assets/bg-pattern-home-3.svg',
+      top right rem(-100)
+    );
+    background-color: $sacramento-state-green;
+    padding-inline: $mobile-padding-inline;
+    padding-block: rem(61);
+
+    &__heading {
+      padding-block-end: rem(56);
+    }
+
+    &__title {
+      color: $white;
+      font-size: rem(32);
+      line-height: rem(32);
+      width: rem(220);
+    }
+  }
+}
