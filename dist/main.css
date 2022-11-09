@@ -156,9 +156,58 @@ input::placeholder {
 }
 @media screen and (max-width: 23.4375rem) {
   .delivering {
+    background-image: url("../../../assets/bg-pattern-home-4-about-3.svg"), url("../../../assets/bg-pattern-home-5.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
     background-color: #004047;
     padding-block: 9.375rem;
     padding-inline: 1.25rem;
     text-align: center;
+    color: #ffffff;
+  }
+  .delivering__testimony {
+    background-image: url("../../../assets/icon-quotes.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    -webkit-padding-before: 2.1875rem;
+            padding-block-start: 2.1875rem;
+  }
+  .delivering__testimony:not(:last-of-type) {
+    -webkit-padding-after: 3rem;
+            padding-block-end: 3rem;
+  }
+  .delivering__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    -webkit-padding-after: 3rem;
+            padding-block-end: 3rem;
+  }
+  .delivering__title span {
+    color: #79c8c7;
+  }
+  .delivering__comment {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    font-weight: 600;
+  }
+  .delivering__client {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #79c8c7;
+    padding-block: 1rem 0.125rem;
+  }
+  .delivering__job-title {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-style: italic;
+    -webkit-padding-after: 1rem;
+            padding-block-end: 1rem;
+  }
+  .delivering__avatar img {
+    width: 3.875rem;
+    border-radius: 50%;
+    border: 0.125rem solid #79c8c7;
   }
 }/*# sourceMappingURL=main.css.map */
