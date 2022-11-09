@@ -1,0 +1,32 @@
+@use '../../abstracts/' as *;
+
+@media screen and (max-width: rem(375)) {
+  .get-started {
+    @include back-image(
+      '../../../assets/bg-pattern-home-6-about-5.svg',
+      bottom rem(-20) left
+    );
+    background-color: $light-coral;
+    padding-block: rem(83) rem(95);
+    padding-inline: $mobile-padding-inline;
+    text-align: center;
+
+    &__title {
+      font-size: rem(32);
+      line-height: rem(32);
+      font-weight: 700;
+      color: $sacramento-state-green;
+      padding-block-end: rem(48);
+    }
+
+    &__button {
+      font-size: rem(18);
+      line-height: rem(28);
+      font-weight: 600;
+      color: $sacramento-state-green;
+      border: rem(2) solid $sacramento-state-green;
+      padding: rem(15) rem(30);
+      border-radius: rem(30);
+    }
+  }
+}

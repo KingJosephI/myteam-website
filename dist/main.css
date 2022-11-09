@@ -210,4 +210,32 @@ input::placeholder {
     border-radius: 50%;
     border: 0.125rem solid #79c8c7;
   }
+}
+@media screen and (max-width: 23.4375rem) {
+  .get-started {
+    background-image: url("../../../assets/bg-pattern-home-6-about-5.svg");
+    background-position: bottom -1.25rem left;
+    background-repeat: no-repeat;
+    background-color: #f67e7e;
+    padding-block: 5.1875rem 5.9375rem;
+    padding-inline: 1.25rem;
+    text-align: center;
+  }
+  .get-started__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #012f34;
+    -webkit-padding-after: 3rem;
+            padding-block-end: 3rem;
+  }
+  .get-started__button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #012f34;
+    border: 0.125rem solid #012f34;
+    padding: 0.9375rem 1.875rem;
+    border-radius: 1.875rem;
+  }
 }/*# sourceMappingURL=main.css.map */
