@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 *,
 *::before,
 *::after {
@@ -6,12 +8,19 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: rem(1440);
+  margin: 0 auto;
+  background-color: $midnight-green;
+}
+
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a,
