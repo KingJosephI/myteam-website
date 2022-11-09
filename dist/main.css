@@ -116,6 +116,14 @@ input::placeholder {
     padding-inline: 1.25rem;
     padding-block: 3.8125rem;
   }
+  .build__topBorder {
+    display: block;
+    width: 3.3125rem;
+    height: 0.25rem;
+    background-color: #f67e7e;
+    -webkit-margin-after: 2.25rem;
+            margin-block-end: 2.25rem;
+  }
   .build__heading {
     -webkit-padding-after: 3.5rem;
             padding-block-end: 3.5rem;
@@ -125,5 +133,24 @@ input::placeholder {
     font-size: 2rem;
     line-height: 2rem;
     width: 13.75rem;
+  }
+  .build__feature {
+    text-align: center;
+  }
+  .build__feature:not(:last-of-type) {
+    -webkit-padding-after: 3rem;
+            padding-block-end: 3rem;
+  }
+  .build__feature h3 {
+    color: #f67e7e;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-block: 1rem 0.5rem;
+  }
+  .build__feature p {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    color: #ffffff;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=main.css.map */

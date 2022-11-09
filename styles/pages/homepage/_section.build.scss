@@ -3,12 +3,20 @@
 @media screen and (max-width: rem(375)) {
   .build {
     @include back-image(
-      '../../../assets/bg-pattern-home-3.svg',
-      top right rem(-100)
+      $url: '../../../assets/bg-pattern-home-3.svg',
+      $position: top right rem(-100)
     );
     background-color: $sacramento-state-green;
     padding-inline: $mobile-padding-inline;
     padding-block: rem(61);
+
+    &__topBorder {
+      display: block;
+      width: rem(53);
+      height: rem(4);
+      background-color: $light-coral;
+      margin-block-end: rem(36);
+    }
 
     &__heading {
       padding-block-end: rem(56);
@@ -19,6 +27,28 @@
       font-size: rem(32);
       line-height: rem(32);
       width: rem(220);
+    }
+
+    &__feature {
+      text-align: center;
+
+      &:not(:last-of-type) {
+        padding-block-end: rem(48);
+      }
+
+      h3 {
+        color: $light-coral;
+        font-size: rem(18);
+        line-height: rem(28);
+        padding-block: rem(16) rem(8);
+      }
+
+      p {
+        font-size: rem(15);
+        line-height: rem(25);
+        color: $white;
+        font-weight: 600;
+      }
     }
   }
 }

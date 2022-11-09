@@ -2,7 +2,10 @@
 
 @media screen and (max-width: rem(375)) {
   .hero {
-    @include back-image('../../../assets/bg-pattern-home-2.svg', bottom center);
+    @include back-image(
+      $url: '../../../assets/bg-pattern-home-2.svg',
+      $position: bottom center
+    );
     text-align: center;
     color: $white;
     padding-inline: $mobile-padding-inline;
