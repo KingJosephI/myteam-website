@@ -109,6 +109,36 @@ input::placeholder {
   }
 }
 @media screen and (max-width: 23.4375rem) {
+  .footer {
+    background-color: #002529;
+    padding-inline: 1.25rem;
+    padding-block: 4.125rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+  }
+  .footer__menu {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    padding-block: 1.5rem;
+  }
+  .footer__link {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .footer__social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    padding-block: 2.5rem 1rem;
+  }
+  .footer__social-media i {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 23.4375rem) {
   .hero {
     background-image: url("../../../assets/bg-pattern-home-2.svg");
     background-position: bottom center;

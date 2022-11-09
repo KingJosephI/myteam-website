@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+
+@media screen and (max-width: rem(375)) {
+  .footer {
+    background-color: $dark-green;
+    padding-inline: $mobile-padding-inline;
+    padding-block: rem(66);
+    text-align: center;
+    color: $white;
+    font-size: rem(15);
+    line-height: rem(25);
+
+    &__menu {
+      display: flex;
+      gap: rem(20);
+      justify-content: center;
+      padding-block: rem(24);
+    }
+
+    &__link {
+      color: $white;
+      font-weight: 600;
+    }
+
+    &__social-media {
+      display: flex;
+      justify-content: center;
+      gap: rem(20);
+      padding-block: rem(40) rem(16);
+
+      i {
+        font-size: rem(24);
+      }
+    }
+  }
+}
