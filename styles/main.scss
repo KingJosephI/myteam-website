@@ -1,2 +1,14 @@
 @use './base/' as *;
 @use './abstracts/' as *;
+@use './layout/' as *;
+@use './pages/' as *;
+
+body {
+  padding: rem(40);
+}
+
+@media screen and (max-width: rem(767)) {
+  body {
+    padding: rem(20);
+  }
+}

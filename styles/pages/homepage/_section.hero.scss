@@ -1,0 +1,10 @@
+@use '../../abstracts/' as *;
+
+@media screen and (max-width: rem(375)) {
+  .hero {
+    &__title {
+      font-size: rem(40);
+      color: $white;
+    }
+  }
+}
