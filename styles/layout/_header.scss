@@ -26,6 +26,8 @@
 
 @media screen and (max-width: rem(767)) {
   .header {
+    padding: rem(20);
+
     &__navigation {
       display: none;
     }
