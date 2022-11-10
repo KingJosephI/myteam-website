@@ -6,6 +6,8 @@
   align-items: center;
   gap: rem(40);
 
+  padding: rem(72);
+
   &__toggle-menu {
     display: none;
   }
@@ -20,6 +22,28 @@
 
     & > li:last-of-type {
       margin-left: auto;
+    }
+  }
+
+  &__link {
+    color: $white;
+    font-size: rem(18);
+    line-height: rem(28);
+    font-weight: 600;
+
+    &:hover {
+      color: $light-coral;
+    }
+  }
+
+  &__contact {
+    border: rem(2) solid $white;
+    padding: rem(10) rem(20);
+    border-radius: rem(20);
+
+    &:hover {
+      background-color: $white;
+      color: $dark-green;
     }
   }
 }

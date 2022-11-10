@@ -46,6 +46,7 @@ input::placeholder {
   justify-content: space-between;
   align-items: center;
   gap: 2.5rem;
+  padding: 4.5rem;
 }
 .header__toggle-menu {
   display: none;
@@ -59,6 +60,24 @@ input::placeholder {
 }
 .header__menu > li:last-of-type {
   margin-left: auto;
+}
+.header__link {
+  color: #ffffff;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.header__link:hover {
+  color: #f67e7e;
+}
+.header__contact {
+  border: 0.125rem solid #ffffff;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.25rem;
+}
+.header__contact:hover {
+  background-color: #ffffff;
+  color: #002529;
 }
 
 @media screen and (max-width: 47.9375rem) {
