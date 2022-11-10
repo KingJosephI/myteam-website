@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   gap: rem(40);
-
-  padding: rem(72);
+  padding-block-start: rem(72);
+  padding-inline: $desktop-padding-inline;
 
   &__toggle-menu {
     display: none;
@@ -40,6 +40,7 @@
     border: rem(2) solid $white;
     padding: rem(10) rem(20);
     border-radius: rem(20);
+    transition: 0.3s;
 
     &:hover {
       background-color: $white;
@@ -48,7 +49,12 @@
   }
 }
 
-@media screen and (max-width: rem(767)) {
+@media screen and (min-width: rem(701)) and (max-width: rem(1000)) {
+  .header {
+    padding: $tablet-padding-inline;
+  }
+}
+@media screen and (max-width: rem(700)) {
   .header {
     padding: $mobile-padding-inline;
 

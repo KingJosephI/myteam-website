@@ -1,26 +1,70 @@
 @use '../../abstracts/' as *;
 
-@media screen and (max-width: rem(375)) {
+.hero {
+  padding-inline: $desktop-padding-inline;
+  color: $white;
+  @include back-image(
+    $url: '../../../assets/bg-pattern-home-2.svg',
+    $position: bottom center
+  );
+
+  &__title {
+    font-weight: 700;
+    margin: 0 auto;
+    font-size: rem(100);
+    line-height: rem(100);
+    span {
+      color: $light-coral;
+    }
+  }
+
+  &__description {
+    font-size: rem(18);
+    line-height: rem(28);
+  }
+}
+
+@media screen and (min-width: rem(701)) and (max-width: rem(1000)) {
+  .hero {
+    padding-inline: $tablet-padding-inline;
+    padding-block: rem(110) rem(260);
+    text-align: center;
+
+    @include back-image(
+      $url: '../../../assets/bg-pattern-home-2.svg',
+      $position: bottom center
+    );
+
+    &__title {
+      font-size: rem(64);
+      line-height: rem(56);
+      max-width: rem(350);
+      padding-block-end: rem(24);
+    }
+
+    &__description {
+      font-size: rem(15);
+      line-height: rem(28);
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: rem(700)) {
   .hero {
     @include back-image(
       $url: '../../../assets/bg-pattern-home-2.svg',
       $position: bottom center
     );
     text-align: center;
-    color: $white;
     padding-inline: $mobile-padding-inline;
     padding-block: rem(80) rem(200);
 
     &__title {
       font-size: rem(40);
-      font-weight: 700;
+      line-height: rem(40);
       max-width: rem(230);
-      margin: 0 auto;
       padding-block-end: rem(18);
-
-      span {
-        color: $light-coral;
-      }
     }
 
     &__description {

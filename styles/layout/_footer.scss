@@ -1,36 +1,94 @@
 @use '../abstracts/' as *;
+.footer {
+  background-color: $dark-green;
+  padding-inline: $mobile-padding-inline;
+  padding-block: rem(66);
+  text-align: center;
+  color: $white;
+  font-size: rem(15);
+  line-height: rem(25);
 
-@media screen and (max-width: rem(375)) {
-  .footer {
-    background-color: $dark-green;
-    padding-inline: $mobile-padding-inline;
-    padding-block: rem(66);
-    text-align: center;
+  &__menu {
+    display: flex;
+    gap: rem(20);
+    justify-content: center;
+    padding-block: rem(24);
+  }
+
+  &__link {
     color: $white;
-    font-size: rem(15);
-    line-height: rem(25);
+    font-weight: 600;
 
-    &__menu {
-      display: flex;
-      gap: rem(20);
-      justify-content: center;
-      padding-block: rem(24);
+    &:hover {
+      color: $light-coral;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    gap: rem(20);
+    padding-block: rem(40) rem(16);
+
+    i {
+      font-size: rem(24);
+
+      &:hover {
+        cursor: pointer;
+        color: $light-coral;
+      }
+    }
+  }
+}
+@media screen and (min-width: rem(700)) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-inline: $tablet-padding-inline;
+
+    text-align: left;
+
+    &__logo {
+      grid-column: 1/2;
+      // background-color: magenta;
     }
 
-    &__link {
-      color: $white;
-      font-weight: 600;
+    &__menu {
+      grid-column: 1/2;
+      text-align: left;
+      padding-block: 0;
+      justify-self: start;
+      align-self: start;
+      // background-color: blue;
+      padding-block-start: rem(20);
     }
 
     &__social-media {
-      display: flex;
-      justify-content: center;
-      gap: rem(20);
-      padding-block: rem(40) rem(16);
+      grid-column: 1/2;
+      grid-row: 3/4;
+      // padding-block: rem(40) rem(16);
+      padding-block: 0;
+      justify-self: start;
+      align-self: center;
+      // background-color: palevioletred;
+    }
 
-      i {
-        font-size: rem(24);
-      }
+    &__copyright {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      text-align: right;
+      // background-color: green;
+      padding-block-start: rem(20);
+      align-self: start;
+    }
+
+    &__address {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      text-align: right;
+      // align-self: start;
+      // background-color: red;
     }
   }
 }
