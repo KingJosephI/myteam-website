@@ -86,3 +86,40 @@
     }
   }
 }
+
+@media screen and (min-width: rem(1024)) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    &__logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      justify-self: start;
+    }
+
+    &__menu {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &__social-media {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      justify-self: end;
+    }
+
+    &__copyright {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+
+    &__address {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      text-align: left;
+      margin-left: rem(-100);
+    }
+  }
+}
