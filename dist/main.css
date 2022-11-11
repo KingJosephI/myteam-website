@@ -10,7 +10,6 @@
 body {
   max-width: 90rem;
   margin: 0 auto;
-  background-color: #014e56;
   font-family: "Livvic", sans-serif;
 }
 
@@ -49,6 +48,7 @@ input::placeholder {
   -webkit-padding-before: 4.5rem;
           padding-block-start: 4.5rem;
   padding-inline: 10.3125rem;
+  background-color: #014e56;
 }
 .header__toggle-menu {
   display: none;
@@ -269,6 +269,7 @@ input::placeholder {
   background-position: bottom center;
   background-repeat: no-repeat;
   color: #ffffff;
+  background-color: #014e56;
   text-align: center;
   padding-inline: 1.25rem;
   padding-block: 5rem 12.5rem;
@@ -405,7 +406,7 @@ input::placeholder {
     padding-block: 8.9375rem;
     background-position: bottom right -6.25rem;
     display: flex;
-    gap: 10vw;
+    gap: 6.25rem;
   }
   .build__title {
     font-size: 3rem;
