@@ -34,6 +34,7 @@ input:-ms-input-placeholder {
 
 a,
 input,
+textarea,
 select,
 input::placeholder {
   font-size: inherit;
@@ -238,6 +239,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding-inline: 10.3125rem;
   }
   .footer__logo {
     grid-column: 1/2;
@@ -489,4 +491,47 @@ input::placeholder {
     display: flex;
     gap: 2.5rem;
   }
+}
+.contact-container {
+  background-color: #014e56;
+  padding-block: 5.625rem;
+  padding-inline: 1.25rem;
+  background-image: url("../../../assets/bg-pattern-contact-2.svg");
+  background-position: bottom -6.25rem right -6.25rem;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  text-align: center;
+  color: #ffffff;
+}
+.contact__title {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+}
+.contact__subtitle {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #f67e7e;
+}
+.contact__services {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding-block: 2.5rem 3.5rem;
+}
+.contact__service {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  -webkit-padding-after: 1.25rem;
+          padding-block-end: 1.25rem;
+}
+.contact__description {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */
