@@ -534,4 +534,28 @@ input::placeholder {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
+}
+
+.form__input, .form__textarea {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 0.0625rem solid #ffffff;
+  padding: 1.5rem 0.875rem;
+}
+.form__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.0075rem;
+  font-weight: 700;
+}
+.form__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.0075rem;
+  font-weight: 700;
+}
+.form__input::placeholder, .form__textarea {
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.0075rem;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */
