@@ -1,0 +1,92 @@
+@use '../../abstracts/' as *;
+
+.build {
+  @include back-image(
+    $url: '../../../assets/bg-pattern-home-3.svg',
+    $position: top right rem(-100)
+  );
+  background-color: $sacramento-state-green;
+  padding-inline: $mobile-padding-inline;
+  padding-block: rem(61);
+
+  &__topBorder {
+    display: block;
+    width: rem(53);
+    height: rem(4);
+    background-color: $light-coral;
+    margin-block-end: rem(36);
+  }
+
+  &__heading {
+    padding-block-end: rem(56);
+  }
+
+  &__title {
+    color: $white;
+    font-size: rem(32);
+    line-height: rem(32);
+    width: rem(220);
+  }
+
+  &__feature {
+    display: block;
+    text-align: center;
+
+    &:not(:last-of-type) {
+      padding-block-end: rem(48);
+    }
+
+    h3 {
+      color: $light-coral;
+      font-size: rem(18);
+      line-height: rem(28);
+      padding-block: rem(16) rem(8);
+    }
+
+    p {
+      font-size: rem(15);
+      line-height: rem(25);
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .build {
+    padding-inline: $tablet-padding-inline;
+
+    &__title {
+      width: rem(450);
+    }
+
+    &__feature {
+      display: flex;
+      gap: rem(20);
+      text-align: left;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        padding-block-end: rem(32);
+      }
+    }
+  }
+}
+@media screen and (min-width: rem(1024)) {
+  .build {
+    padding-inline: $desktop-padding-inline;
+    padding-block: rem(143);
+    background-position: bottom right rem(-100);
+    display: flex;
+    gap: rem(100);
+
+    &__title {
+      font-size: rem(48);
+      line-height: rem(48);
+    }
+
+    &__feature:first-of-type {
+      padding-block-start: rem(32);
+    }
+  }
+}

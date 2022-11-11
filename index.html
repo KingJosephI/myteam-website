@@ -9,8 +9,15 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Frontend Mentor | myteam website challenge - Homepage</title>
+    <title>Myteam website - Homepage</title>
   </head>
   <body>
     <header class="header">
@@ -18,24 +25,31 @@
         <img src="./assets/logo.svg" alt="My team logo" />
       </div>
       <button class="header__toggle-menu" aria-controls="header__menu">
-        <span class="sr-only">Menu</span>
+        <!-- <span class="sr-only">Menu</span> -->
       </button>
-      <nav>
+      <nav class="header__navigation">
         <ul class="header__menu" id="header__menu">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="contact.html">contact us</a></li>
+          <li><a href="index.html" class="header__link">home</a></li>
+          <li><a href="about.html" class="header__link">about</a></li>
+          <li>
+            <a href="contact.html" class="header__link header__contact"
+              >contact us</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="hero">
         <h1 class="hero__title">Find the best <span>talent</span></h1>
-        <p class="hero__description">
-          Finding the right people and building high performing teams can be
-          hard. Most companies aren’t tapping into the abundance of global
-          talent. We’re about to change that.
-        </p>
+        <div class="hero__content">
+          <span class="hero__topBorder"></span>
+          <p class="hero__description">
+            Finding the right people and building high performing teams can be
+            hard. Most companies aren’t tapping into the abundance of global
+            talent. We’re about to change that.
+          </p>
+        </div>
       </section>
       <section class="build">
         <div class="build__heading">
@@ -47,34 +61,40 @@
         <div class="build__features">
           <div class="build__feature">
             <div><img src="./assets/icon-person.svg" alt="" /></div>
-            <h3>Experienced Individuals</h3>
-            <p>
-              Our network is made up of highly experienced professionals who are
-              passionate about what they do.
-            </p>
+            <div>
+              <h3>Experienced Individuals</h3>
+              <p>
+                Our network is made up of highly experienced professionals who
+                are passionate about what they do.
+              </p>
+            </div>
           </div>
           <div class="build__feature">
             <div><img src="./assets/icon-cog.svg" alt="" /></div>
-            <h3>Easy to Implement</h3>
-            <p>
-              Our processes have been refined over years of implementation
-              meaning our teams always deliver.
-            </p>
+            <div>
+              <h3>Easy to Implement</h3>
+              <p>
+                Our processes have been refined over years of implementation
+                meaning our teams always deliver.
+              </p>
+            </div>
           </div>
           <div class="build__feature">
             <div><img src="./assets/icon-chart.svg" alt="" /></div>
-            <h3>Enhanced Productivity</h3>
-            <p>
-              Our customized platform with in-built analytics helps you manage
-              your distributed teams.
-            </p>
+            <div>
+              <h3>Enhanced Productivity</h3>
+              <p>
+                Our customized platform with in-built analytics helps you manage
+                your distributed teams.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section class="delivering">
         <h2 class="delivering__title">
-          Delivering real results for top companies. Some of our success
-          stories.
+          Delivering real results for top companies. Some of our
+          <span>success stories.</span>
         </h2>
         <div class="delivering__testimonies">
           <div class="delivering__testimony">
@@ -85,8 +105,8 @@
             </p>
             <h3 class="delivering__client">Kady Baker</h3>
             <p class="delivering__job-title">Product Manager at Bookmark</p>
-            <div>
-              <img src="./assets/avatar-kady.jpg" alt=""></img>
+            <div class="delivering__avatar">
+              <img src="./assets/avatar-kady.jpg" alt="" />
             </div>
           </div>
           <div class="delivering__testimony">
@@ -97,7 +117,9 @@
             </p>
             <h3 class="delivering__client">Aiysha Reese</h3>
             <p class="delivering__job-title">Founder of Manage</p>
-            <div><img src="./assets/avatar-aiysha.jpg" alt=""></div>
+            <div class="delivering__avatar">
+              <img src="./assets/avatar-aiysha.jpg" alt="" />
+            </div>
           </div>
           <div class="delivering__testimony">
             <p class="delivering__comment">
@@ -107,7 +129,9 @@
             </p>
             <h3 class="delivering__client">Arthur Clarke</h3>
             <p class="delivering__job-title">Co-founder of MyPhysio</p>
-            <div><img src="./assets/avatar-arthur.jpg" alt=""></div>
+            <div class="delivering__avatar">
+              <img src="./assets/avatar-arthur.jpg" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -117,10 +141,10 @@
       </section>
     </main>
     <footer class="footer">
-      <div><img src="./assets/logo.svg" alt="" /></div>
+      <div class="footer__logo"><img src="./assets/logo.svg" alt="" /></div>
       <ul class="footer__menu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
+        <li><a href="index.html" class="footer__link">home</a></li>
+        <li><a href="about.html" class="footer__link">about</a></li>
       </ul>
       <address class="footer__address">
         987 Hillcrest Lane <br />
@@ -128,6 +152,11 @@
         California 92714 <br />
         Call Us : 949-833-7432 <br />
       </address>
+      <div class="footer__social-media">
+        <div><i class="fa-brands fa-square-facebook"></i></div>
+        <div><i class="fa-brands fa-pinterest"></i></div>
+        <div><i class="fa-brands fa-twitter"></i></div>
+      </div>
       <div class="footer__copyright">Copyright 2020. All Rights Reserved</div>
     </footer>
   </body>

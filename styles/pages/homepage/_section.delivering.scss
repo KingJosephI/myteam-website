@@ -1,0 +1,85 @@
+@use '../../abstracts/' as *;
+
+.delivering {
+  background-image: url('../../../assets/bg-pattern-home-4-about-3.svg'),
+    url('../../../assets/bg-pattern-home-5.svg');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-color: $deep-jungle-blue;
+  padding-block: rem(150);
+  padding-inline: $mobile-padding-inline;
+  text-align: center;
+  color: $white;
+
+  &__testimony {
+    @include back-image(
+      $url: '../../../assets/icon-quotes.svg',
+      $position: top center
+    );
+
+    padding-block-start: rem(35);
+
+    &:not(:last-of-type) {
+      padding-block-end: rem(48);
+    }
+  }
+
+  &__title {
+    font-size: rem(32);
+    line-height: rem(32);
+    font-weight: 700;
+    padding-block-end: rem(48);
+
+    span {
+      color: $rapture-blue;
+    }
+  }
+
+  &__comment {
+    font-size: rem(15);
+    line-height: rem(25);
+    font-weight: 600;
+  }
+
+  &__client {
+    font-size: rem(18);
+    line-height: rem(28);
+    font-weight: 700;
+    color: $rapture-blue;
+    padding-block: rem(16) rem(2);
+  }
+
+  &__job-title {
+    font-size: rem(13);
+    line-height: rem(18);
+    font-style: italic;
+    padding-block-end: rem(16);
+  }
+
+  &__avatar {
+    img {
+      width: rem(62);
+      border-radius: 50%;
+      border: rem(2) solid $rapture-blue;
+    }
+  }
+}
+
+@media screen and (min-width: rem(1024)) {
+  .delivering {
+    padding-inline: $desktop-padding-inline;
+
+    &__title {
+      font-size: rem(48);
+      line-height: rem(48);
+      width: 85%;
+      margin: 0 auto;
+      padding-block-end: rem(56);
+    }
+
+    &__testimonies {
+      display: flex;
+      gap: rem(40);
+    }
+  }
+}

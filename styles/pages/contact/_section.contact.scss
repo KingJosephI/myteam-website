@@ -1,0 +1,73 @@
+@use '../../abstracts/' as *;
+
+.contact-container {
+  background-color: $midnight-green;
+  padding-block: rem(90);
+  padding-inline: $mobile-padding-inline;
+  @include back-image(
+    '../../../assets/bg-pattern-contact-2.svg',
+    bottom rem(-100) right rem(-100)
+  );
+}
+
+.contact {
+  text-align: center;
+  color: $white;
+
+  &__title {
+    font-size: rem(40);
+    line-height: rem(40);
+    padding-block-end: rem(16);
+  }
+
+  &__subtitle {
+    font-size: rem(32);
+    line-height: rem(48);
+    color: $light-coral;
+  }
+
+  &__services {
+    width: fit-content;
+    margin: 0 auto;
+    padding-block: rem(40) rem(56);
+    text-align: center;
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    padding-block-end: rem(20);
+    text-align: left;
+  }
+
+  &__description {
+    font-size: rem(18);
+    line-height: rem(28);
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .contact-container {
+    padding-inline: $tablet-padding-inline;
+    background-image: url('../../../assets/bg-pattern-about-2-contact-1.svg'),
+      url('../../../assets/bg-pattern-contact-2.svg');
+    background-repeat: no-repeat;
+    background-position: top rem(90) left rem(-100),
+      bottom rem(-100) right rem(-100);
+  }
+}
+
+@media screen and (min-width: rem(1024)) {
+  .contact-container {
+    padding-inline: $desktop-padding-inline;
+    display: flex;
+    gap: rem(50);
+
+    .contact__title,
+    .contact__subtitle {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+.get-started {
+  @include back-image(
+    '../../../assets/bg-pattern-home-6-about-5.svg',
+    bottom rem(-20) left
+  );
+  background-color: $light-coral;
+  padding-block: rem(83) rem(95);
+  padding-inline: $mobile-padding-inline;
+  text-align: center;
+
+  &__title {
+    font-size: rem(32);
+    line-height: rem(32);
+    font-weight: 700;
+    color: $sacramento-state-green;
+    padding-block-end: rem(48);
+  }
+
+  &__button {
+    font-size: rem(18);
+    line-height: rem(28);
+    font-weight: 600;
+    color: $sacramento-state-green;
+    border: rem(2) solid $sacramento-state-green;
+    padding: rem(15) rem(30);
+    border-radius: rem(30);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $sacramento-state-green;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .get-started {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: $tablet-padding-inline;
+
+    &__title {
+      padding-block-end: 0;
+    }
+  }
+}
+
+@media screen and (min-width: rem(1024)) {
+  .get-started {
+    padding-inline: $desktop-padding-inline;
+  }
+}
