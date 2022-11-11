@@ -11,7 +11,7 @@
 body {
   max-width: rem(1440);
   margin: 0 auto;
-  // background-color: $midnight-green;
+  background-color: $midnight-green;
   font-family: 'Livvic', sans-serif;
 }
 
@@ -26,9 +26,10 @@ a {
 
 a,
 input,
+input::placeholder,
 textarea,
 select,
-input::placeholder {
+button {
   font-size: inherit;
   font-family: inherit;
 }

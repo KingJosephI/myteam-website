@@ -10,6 +10,7 @@
 body {
   max-width: 90rem;
   margin: 0 auto;
+  background-color: #014e56;
   font-family: "Livvic", sans-serif;
 }
 
@@ -34,9 +35,10 @@ input:-ms-input-placeholder {
 
 a,
 input,
+input::placeholder,
 textarea,
 select,
-input::placeholder {
+button {
   font-size: inherit;
   font-family: inherit;
 }
@@ -91,7 +93,7 @@ input::placeholder {
 }
 @media screen and (max-width: 43.75rem) {
   .header {
-    padding: 1.25rem;
+    padding: 1.625rem;
   }
   .header__navigation {
     display: none;
@@ -114,7 +116,7 @@ input::placeholder {
   background-repeat: no-repeat;
   background-color: #f67e7e;
   padding-block: 5.1875rem 5.9375rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   text-align: center;
 }
 .get-started__title {
@@ -159,7 +161,7 @@ input::placeholder {
 }
 .footer {
   background-color: #002529;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   padding-block: 4.125rem;
   text-align: center;
   color: #ffffff;
@@ -273,7 +275,7 @@ input::placeholder {
   color: #ffffff;
   background-color: #014e56;
   text-align: center;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   padding-block: 5rem 12.5rem;
 }
 .hero__title {
@@ -342,7 +344,7 @@ input::placeholder {
   background-position: top right -6.25rem;
   background-repeat: no-repeat;
   background-color: #012f34;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   padding-block: 3.8125rem;
 }
 .build__topBorder {
@@ -425,7 +427,7 @@ input::placeholder {
   background-repeat: no-repeat;
   background-color: #004047;
   padding-block: 9.375rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   text-align: center;
   color: #ffffff;
 }
@@ -495,7 +497,7 @@ input::placeholder {
 .contact-container {
   background-color: #014e56;
   padding-block: 5.625rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1.625rem;
   background-image: url("../../../assets/bg-pattern-contact-2.svg");
   background-position: bottom -6.25rem right -6.25rem;
   background-repeat: no-repeat;
@@ -517,11 +519,12 @@ input::placeholder {
   color: #f67e7e;
 }
 .contact__services {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto;
   padding-block: 2.5rem 3.5rem;
+  text-align: center;
 }
 .contact__service {
   display: flex;
@@ -529,6 +532,7 @@ input::placeholder {
   gap: 1.25rem;
   -webkit-padding-after: 1.25rem;
           padding-block-end: 1.25rem;
+  text-align: left;
 }
 .contact__description {
   font-size: 1.125rem;
@@ -536,13 +540,37 @@ input::placeholder {
   font-weight: 700;
 }
 
+@media screen and (min-width: 43.75rem) {
+  .contact-container {
+    padding-inline: 4.5rem;
+    background-image: url("../../../assets/bg-pattern-about-2-contact-1.svg"), url("../../../assets/bg-pattern-contact-2.svg");
+    background-repeat: no-repeat;
+    background-position: top 5.625rem left -6.25rem, bottom -6.25rem right -6.25rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .contact-container {
+    padding-inline: 10.3125rem;
+    display: flex;
+    gap: 3.125rem;
+  }
+  .contact-container .contact__title,
+.contact-container .contact__subtitle {
+    text-align: left;
+  }
+}
+.form {
+  margin: 0 auto;
+}
 .form__input, .form__textarea {
   display: block;
-  background-color: transparent;
   width: 100%;
+  padding: 1.5rem 0.875rem;
   border: none;
   border-bottom: 0.0625rem solid #ffffff;
-  padding: 1.5rem 0.875rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
 }
 .form__input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -558,4 +586,30 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: -0.0075rem;
   font-weight: 700;
+}
+.form input {
+  color: white;
+}
+.form input:focus-visible {
+  color: #f67e7e;
+  font-weight: 600;
+}
+.form__button {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  color: #004047;
+  padding: 0.9375rem 1.875rem;
+  border-radius: 1.875rem;
+  border: none;
+  margin-top: 1.3125rem;
+}
+.form__button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 43.75rem) {
+  .form {
+    width: 32.1875rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,15 +1,18 @@
 @use '../../abstracts/' as *;
 
 .form {
-  // color: $white;
+  margin: 0 auto;
+
   &__input,
   &__textarea {
     display: block;
-    background-color: transparent;
     width: 100%;
+    padding: rem(24) rem(14);
     border: none;
     border-bottom: rem(1) solid $white;
-    padding: rem(24) rem(14);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
   }
 
   &__input::placeholder,
@@ -18,7 +21,34 @@
     letter-spacing: rem(-0.12);
     font-weight: 700;
   }
-  // &__textarea {
-  //   color: $white;
-  // }
+
+  input {
+    color: white;
+
+    &:focus-visible {
+      color: $light-coral;
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    font-size: rem(28);
+    font-weight: 600;
+    line-height: rem(28);
+    color: $deep-jungle-blue;
+    padding: rem(15) rem(30);
+    border-radius: rem(30);
+    border: none;
+    margin-top: rem(21);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .form {
+    width: rem(515);
+  }
 }
