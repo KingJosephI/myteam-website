@@ -494,6 +494,27 @@ button {
     gap: 2.5rem;
   }
 }
+.intro {
+  text-align: center;
+  color: #ffffff;
+  padding-inline: 1.625rem;
+  padding-block: 5.125rem 7rem;
+  background-image: url("../../../assets/bg-pattern-about-1-mobile-nav-1.svg");
+  background-position: bottom -6.25rem right -6.25rem;
+  background-repeat: no-repeat;
+}
+.intro__title {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+}
+.intro__description {
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 .contact-container {
   background-color: #014e56;
   padding-block: 5.625rem;
