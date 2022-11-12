@@ -9,7 +9,6 @@
 .intro {
   text-align: center;
   color: $white;
-  // padding-inline: $mobile-padding-inline;
   padding-block: rem(82) rem(112);
 
   @include back-image(
@@ -41,6 +40,32 @@
   .about-container {
     & > * {
       padding-inline: $desktop-padding-inline;
+    }
+  }
+
+  .intro {
+    display: flex;
+    gap: rem(100);
+
+    &__title {
+      font-size: rem(64);
+      line-height: rem(100);
+      // padding-block-end: rem(16);
+    }
+
+    &__description {
+      // font-size: rem(15);
+      // line-height: rem(28);
+      // font-weight: 600;
+      text-align: left;
+    }
+
+    &__topBorder {
+      display: block;
+      width: rem(53);
+      height: rem(4);
+      background-color: $light-coral;
+      margin-block-end: rem(36);
     }
   }
 }

@@ -1,1 +1,12 @@
 @use '../../abstracts/' as *;
+
+.directors {
+  background-color: $deep-jungle-blue;
+  color: $white;
+  text-align: center;
+
+  &__title {
+    font-size: rem(32);
+    line-height: rem(32);
+  }
+}
