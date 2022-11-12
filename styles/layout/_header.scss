@@ -58,6 +58,7 @@
 @media screen and (max-width: rem(700)) {
   .header {
     padding: $mobile-padding-inline;
+    padding-block-start: rem(46);
 
     &__navigation {
       display: none;

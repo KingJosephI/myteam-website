@@ -1,9 +1,15 @@
 @use '../../abstracts/' as *;
 
+.about-container {
+  & > * {
+    padding-inline: $mobile-padding-inline;
+  }
+}
+
 .intro {
   text-align: center;
   color: $white;
-  padding-inline: $mobile-padding-inline;
+  // padding-inline: $mobile-padding-inline;
   padding-block: rem(82) rem(112);
 
   @include back-image(
@@ -21,5 +27,20 @@
     font-size: rem(15);
     line-height: rem(28);
     font-weight: 600;
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .about-container {
+    & > * {
+      padding-inline: $tablet-padding-inline;
+    }
+  }
+}
+@media screen and (min-width: rem(1024)) {
+  .about-container {
+    & > * {
+      padding-inline: $desktop-padding-inline;
+    }
   }
 }

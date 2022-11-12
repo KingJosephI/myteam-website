@@ -94,6 +94,8 @@ button {
 @media screen and (max-width: 43.75rem) {
   .header {
     padding: 1.625rem;
+    -webkit-padding-before: 2.875rem;
+            padding-block-start: 2.875rem;
   }
   .header__navigation {
     display: none;
@@ -494,10 +496,13 @@ button {
     gap: 2.5rem;
   }
 }
+.about-container > * {
+  padding-inline: 1.625rem;
+}
+
 .intro {
   text-align: center;
   color: #ffffff;
-  padding-inline: 1.625rem;
   padding-block: 5.125rem 7rem;
   background-image: url("../../../assets/bg-pattern-about-1-mobile-nav-1.svg");
   background-position: bottom -6.25rem right -6.25rem;
@@ -515,6 +520,16 @@ button {
   font-weight: 600;
 }
 
+@media screen and (min-width: 43.75rem) {
+  .about-container > * {
+    padding-inline: 4.5rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .about-container > * {
+    padding-inline: 10.3125rem;
+  }
+}
 .contact-container {
   background-color: #014e56;
   padding-block: 5.625rem;
