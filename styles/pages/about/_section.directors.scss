@@ -4,6 +4,10 @@
   padding-inline: $mobile-padding-inline;
   padding-block: rem(90) rem(113);
   background-color: $deep-jungle-blue;
+  background-image: url('../../../assets/bg-pattern-about-2-contact-1.svg'),
+    url('../../../assets/bg-pattern-home-4-about-3.svg');
+  background-repeat: no-repeat;
+  background-position: top left rem(-100), bottom right;
   text-align: center;
   color: $white;
 

@@ -553,6 +553,9 @@ button {
   padding-inline: 1.625rem;
   padding-block: 5.625rem 7.0625rem;
   background-color: #004047;
+  background-image: url("../../../assets/bg-pattern-about-2-contact-1.svg"), url("../../../assets/bg-pattern-home-4-about-3.svg");
+  background-repeat: no-repeat;
+  background-position: top left -6.25rem, bottom right;
   text-align: center;
   color: #ffffff;
 }
