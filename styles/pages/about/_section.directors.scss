@@ -4,9 +4,102 @@
   background-color: $deep-jungle-blue;
   color: $white;
   text-align: center;
+  padding-inline: $mobile-padding-inline;
+  padding-block: rem(90) rem(113);
 
   &__title {
     font-size: rem(32);
     line-height: rem(32);
+    padding-block-end: rem(50);
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(60);
+    justify-items: center;
+  }
+
+  &__card {
+    background-color: $sacramento-state-green;
+    padding-block: rem(32) rem(60);
+    position: relative;
+    width: rem(280);
+
+    img {
+      width: rem(96);
+      border-radius: 50%;
+      border: rem(2) solid $rapture-blue;
+    }
+
+    .open-close {
+      width: rem(56);
+      aspect-ratio: 1;
+      background-color: $light-coral;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: rem(-28);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: rem(24);
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f95b5b;
+      }
+    }
+  }
+
+  &__name {
+    font-size: rem(18);
+    line-height: rem(28);
+    font-weight: 700;
+    color: $rapture-blue;
+  }
+
+  &__job-title {
+    font-size: rem(15);
+    line-height: rem(25);
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__comment {
+    display: none;
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .directors {
+    padding-inline: $tablet-padding-inline;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      justify-items: stretch;
+    }
+
+    &__card {
+      width: 100%;
+      // min-width: rem(280);
+    }
+  }
+}
+@media screen and (min-width: rem(1024)) {
+  .directors {
+    padding-inline: $desktop-padding-inline;
+    &__title {
+      font-size: rem(48);
+      line-height: rem(48);
+    }
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__card {
+      width: 100%;
+    }
   }
 }

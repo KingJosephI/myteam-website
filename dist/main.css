@@ -553,12 +553,93 @@ button {
   background-color: #004047;
   color: #ffffff;
   text-align: center;
+  padding-inline: 1.625rem;
+  padding-block: 5.625rem 7.0625rem;
 }
 .directors__title {
   font-size: 2rem;
   line-height: 2rem;
+  -webkit-padding-after: 3.125rem;
+          padding-block-end: 3.125rem;
+}
+.directors__list {
+  display: grid;
+  gap: 3.75rem;
+  justify-items: center;
+}
+.directors__card {
+  background-color: #012f34;
+  padding-block: 2rem 3.75rem;
+  position: relative;
+  width: 17.5rem;
+}
+.directors__card img {
+  width: 6rem;
+  border-radius: 50%;
+  border: 0.125rem solid #79c8c7;
+}
+.directors__card .open-close {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  background-color: #f67e7e;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.directors__card .open-close:hover {
+  cursor: pointer;
+  background-color: #f95b5b;
+}
+.directors__name {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #79c8c7;
+}
+.directors__job-title {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.directors__comment {
+  display: none;
 }
 
+@media screen and (min-width: 43.75rem) {
+  .directors {
+    padding-inline: 4.5rem;
+  }
+  .directors__list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+  }
+  .directors__card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .directors {
+    padding-inline: 10.3125rem;
+  }
+  .directors__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .directors__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .directors__card {
+    width: 100%;
+  }
+}
 .contact-container {
   background-color: #014e56;
   padding-block: 5.625rem;
