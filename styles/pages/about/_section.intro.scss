@@ -1,0 +1,71 @@
+@use '../../abstracts/' as *;
+
+.about-container {
+  & > * {
+    padding-inline: $mobile-padding-inline;
+  }
+}
+
+.intro {
+  text-align: center;
+  color: $white;
+  padding-block: rem(82) rem(112);
+
+  @include back-image(
+    '../../../assets/bg-pattern-about-1-mobile-nav-1.svg',
+    bottom rem(-100) right rem(-100)
+  );
+
+  &__title {
+    font-size: rem(40);
+    line-height: rem(40);
+    padding-block-end: rem(16);
+  }
+
+  &__description {
+    font-size: rem(15);
+    line-height: rem(28);
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .about-container {
+    & > * {
+      padding-inline: $tablet-padding-inline;
+    }
+  }
+}
+@media screen and (min-width: rem(1024)) {
+  .about-container {
+    & > * {
+      padding-inline: $desktop-padding-inline;
+    }
+  }
+
+  .intro {
+    display: flex;
+    gap: rem(100);
+
+    &__title {
+      font-size: rem(64);
+      line-height: rem(100);
+      // padding-block-end: rem(16);
+    }
+
+    &__description {
+      // font-size: rem(15);
+      // line-height: rem(28);
+      // font-weight: 600;
+      text-align: left;
+    }
+
+    &__topBorder {
+      display: block;
+      width: rem(53);
+      height: rem(4);
+      background-color: $light-coral;
+      margin-block-end: rem(36);
+    }
+  }
+}
