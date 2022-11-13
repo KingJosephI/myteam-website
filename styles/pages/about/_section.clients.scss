@@ -4,7 +4,11 @@
   padding-inline: $mobile-padding-inline;
   padding-block: rem(88);
   text-align: center;
-
+  background-color: $sacramento-state-green;
+  @include back-image(
+    '../../../assets/bg-pattern-home-3.svg',
+    top rem(-130) left rem(-100)
+  );
   &__title {
     font-size: rem(32);
     line-height: rem(32);
@@ -31,6 +35,7 @@
   .clients {
     padding-inline: $tablet-padding-inline;
     padding-block: rem(100);
+    background-position: top rem(-142) left 0;
   }
 }
 
@@ -38,6 +43,7 @@
   .clients {
     padding-inline: $desktop-padding-inline;
     padding-block: rem(140);
+    background-position: top 0 left;
 
     &__list {
       display: grid;
