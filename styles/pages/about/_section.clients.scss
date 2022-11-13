@@ -1,1 +1,54 @@
 @use '../../abstracts/' as *;
+
+.clients {
+  padding-inline: $mobile-padding-inline;
+  padding-block: rem(88);
+  text-align: center;
+
+  &__title {
+    font-size: rem(32);
+    line-height: rem(32);
+    padding-block-end: rem(70);
+
+    color: $white;
+  }
+  &__list {
+    display: grid;
+    grid-auto-flow: row;
+
+    gap: rem(40);
+  }
+
+  &__list > * {
+    padding-bottom: rem;
+  }
+  img {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: rem(700)) {
+  .clients {
+    padding-inline: $tablet-padding-inline;
+    padding-block: rem(100);
+  }
+}
+
+@media screen and (min-width: rem(1024)) {
+  .clients {
+    padding-inline: $desktop-padding-inline;
+    padding-block: rem(140);
+
+    &__list {
+      display: grid;
+      grid-auto-flow: column;
+
+      gap: rem(20);
+    }
+
+    &__title {
+      font-size: rem(48);
+      line-height: rem(48);
+    }
+  }
+}

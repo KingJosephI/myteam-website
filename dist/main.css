@@ -550,11 +550,11 @@ button {
   }
 }
 .directors {
-  background-color: #004047;
-  color: #ffffff;
-  text-align: center;
   padding-inline: 1.625rem;
   padding-block: 5.625rem 7.0625rem;
+  background-color: #004047;
+  text-align: center;
+  color: #ffffff;
 }
 .directors__title {
   font-size: 2rem;
@@ -638,6 +638,51 @@ button {
   }
   .directors__card {
     width: 100%;
+  }
+}
+.clients {
+  padding-inline: 1.625rem;
+  padding-block: 5.5rem;
+  text-align: center;
+}
+.clients__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-padding-after: 4.375rem;
+          padding-block-end: 4.375rem;
+  color: #ffffff;
+}
+.clients__list {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2.5rem;
+}
+.clients__list > * {
+  padding-bottom: rem;
+}
+.clients img {
+  width: 200px;
+}
+
+@media screen and (min-width: 43.75rem) {
+  .clients {
+    padding-inline: 4.5rem;
+    padding-block: 6.25rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .clients {
+    padding-inline: 10.3125rem;
+    padding-block: 8.75rem;
+  }
+  .clients__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.25rem;
+  }
+  .clients__title {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
 .contact-container {
