@@ -577,6 +577,7 @@ button {
   padding-block: 2rem 3.75rem;
   position: relative;
   width: 17.5rem;
+  position: relative;
 }
 .directors__card img {
   width: 6rem;
@@ -597,6 +598,7 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  z-index: 1000;
 }
 .directors__card .open-close:hover {
   cursor: pointer;
@@ -616,6 +618,47 @@ button {
 }
 .directors__comment {
   display: none;
+}
+.directors .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #002529;
+}
+.directors .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.directors .center p {
+  text-align: left;
+  padding-block: 0.625rem;
+}
+.directors__presentation {
+  width: 100%;
+}
+.directors__card:hover .overlay {
+  opacity: 1;
+}
+.directors__social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.directors__social-media i {
+  font-size: 1.25rem;
+  aspect-ratio: 1;
+  display: block;
 }
 
 @media screen and (min-width: 43.75rem) {

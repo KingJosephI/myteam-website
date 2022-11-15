@@ -28,6 +28,7 @@
     padding-block: rem(32) rem(60);
     position: relative;
     width: rem(280);
+    position: relative;
 
     img {
       width: rem(96);
@@ -49,6 +50,7 @@
       justify-content: center;
       align-items: center;
       font-size: rem(24);
+      z-index: 1000;
 
       &:hover {
         cursor: pointer;
@@ -73,6 +75,52 @@
 
   &__comment {
     display: none;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: $dark-green;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: rem(15);
+    line-height: rem(25);
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    p {
+      text-align: left;
+      padding-block: rem(10);
+    }
+  }
+  &__presentation {
+    width: 100%;
+  }
+  &__card:hover .overlay {
+    opacity: 1;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    gap: rem(20);
+
+    i {
+      font-size: rem(20);
+      aspect-ratio: 1;
+      display: block;
+    }
   }
 }
 
