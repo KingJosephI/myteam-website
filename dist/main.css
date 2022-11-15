@@ -585,24 +585,30 @@ button {
   border: 0.125rem solid #79c8c7;
 }
 .directors__card .open-close {
-  width: 3.5rem;
-  aspect-ratio: 1;
-  background-color: #f67e7e;
-  border-radius: 50%;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  background-color: #f67e7e;
+  border-radius: 50%;
   bottom: -1.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  background-image: url("../../../assets/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 1000;
 }
-.directors__card .open-close:hover {
+.directors__card .close-button {
+  background-image: url("../../../assets/icon-close.svg");
+  background-color: #79c8c7;
+}
+.directors__card .close-button:hover {
   cursor: pointer;
-  background-color: #f95b5b;
 }
 .directors__name {
   font-size: 1.125rem;
@@ -647,7 +653,7 @@ button {
 .directors__presentation {
   width: 100%;
 }
-.directors__card:hover .overlay {
+.directors .comment-display {
   opacity: 1;
 }
 .directors__social-media {
