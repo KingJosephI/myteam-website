@@ -642,13 +642,11 @@ button {
   line-height: 1.5625rem;
   transform: translate(-50%, -50%);
   text-align: center;
+  padding-inline: 1.875rem;
+  width: 100%;
 }
 .directors__comment .center p {
-  text-align: left;
   padding-block: 0.625rem;
-}
-.directors__presentation {
-  width: 100%;
 }
 .directors__presentation:has(.close-button) + .directors__comment {
   opacity: 1;
@@ -659,9 +657,13 @@ button {
   gap: 1.25rem;
 }
 .directors__social-media i {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   aspect-ratio: 1;
   display: block;
+}
+.directors__social-media i:hover {
+  color: #f67e7e;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 43.75rem) {
@@ -680,15 +682,15 @@ button {
   .directors {
     padding-inline: 10.3125rem;
   }
-  .directors__title {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
   .directors__list {
     grid-template-columns: repeat(3, 1fr);
   }
   .directors__card {
     width: 100%;
+  }
+  .directors__title {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
 .clients {

@@ -102,16 +102,13 @@
 
       transform: translate(-50%, -50%);
       text-align: center;
+      padding-inline: rem(30);
+      width: 100%;
 
       p {
-        text-align: left;
         padding-block: rem(10);
       }
     }
-  }
-
-  &__presentation {
-    width: 100%;
   }
 
   &__presentation:has(.close-button) + &__comment {
@@ -124,9 +121,14 @@
     gap: rem(20);
 
     i {
-      font-size: rem(20);
+      font-size: rem(24);
       aspect-ratio: 1;
       display: block;
+
+      &:hover {
+        color: $light-coral;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -137,7 +139,6 @@
 
     &__list {
       grid-template-columns: repeat(2, 1fr);
-
       justify-items: stretch;
     }
 
@@ -150,17 +151,17 @@
   .directors {
     padding-inline: $desktop-padding-inline;
 
-    &__title {
-      font-size: rem(48);
-      line-height: rem(48);
-    }
-
     &__list {
       grid-template-columns: repeat(3, 1fr);
     }
 
     &__card {
       width: 100%;
+    }
+
+    &__title {
+      font-size: rem(48);
+      line-height: rem(48);
     }
   }
 }
