@@ -1,7 +1,9 @@
-const openCloseButton = document.querySelector('.open-close');
-const overlay = document.querySelector('.overlay');
+const toggleComments = document.querySelectorAll('.toggle-comment');
+const comment = document.querySelector('.directors__comment');
 
-openCloseButton.addEventListener('click', () => {
-  openCloseButton.classList.toggle('close-button');
-  overlay.classList.toggle('comment-display');
+toggleComments.forEach((toggleCommentButton) => {
+  toggleCommentButton.addEventListener('click', () => {
+    toggleCommentButton.classList.toggle('close-button');
+    // overlay.classList.toggle('comment-display');
+  });
 });

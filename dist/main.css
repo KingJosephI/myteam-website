@@ -584,7 +584,7 @@ button {
   border-radius: 50%;
   border: 0.125rem solid #79c8c7;
 }
-.directors__card .open-close {
+.directors__card .toggle-comment {
   position: absolute;
   left: 0;
   right: 0;
@@ -623,9 +623,6 @@ button {
   font-style: italic;
 }
 .directors__comment {
-  display: none;
-}
-.directors .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -637,7 +634,7 @@ button {
   transition: 0.5s ease;
   background-color: #002529;
 }
-.directors .center {
+.directors__comment .center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -646,14 +643,14 @@ button {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.directors .center p {
+.directors__comment .center p {
   text-align: left;
   padding-block: 0.625rem;
 }
 .directors__presentation {
   width: 100%;
 }
-.directors .comment-display {
+.directors__presentation:has(.close-button) + .directors__comment {
   opacity: 1;
 }
 .directors__social-media {

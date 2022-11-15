@@ -36,7 +36,7 @@
       border: rem(2) solid $rapture-blue;
     }
 
-    .open-close {
+    .toggle-comment {
       position: absolute;
       left: 0;
       right: 0;
@@ -81,10 +81,6 @@
   }
 
   &__comment {
-    display: none;
-  }
-
-  .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -95,28 +91,30 @@
     opacity: 0;
     transition: 0.5s ease;
     background-color: $dark-green;
-  }
-  .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
 
-    font-size: rem(15);
-    line-height: rem(25);
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
 
-    transform: translate(-50%, -50%);
-    text-align: center;
+      font-size: rem(15);
+      line-height: rem(25);
 
-    p {
-      text-align: left;
-      padding-block: rem(10);
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      p {
+        text-align: left;
+        padding-block: rem(10);
+      }
     }
   }
+
   &__presentation {
     width: 100%;
   }
 
-  .comment-display {
+  &__presentation:has(.close-button) + &__comment {
     opacity: 1;
   }
 
