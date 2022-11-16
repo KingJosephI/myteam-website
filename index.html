@@ -25,11 +25,15 @@
       <div class="header__logo">
         <img src="./assets/logo.svg" alt="My team logo" />
       </div>
-      <button class="header__toggle-menu" aria-controls="header__menu">
+      <button
+        class="header__toggle-menu"
+        aria-controls="header__menu"
+        aria-expanded="false"
+      >
         <!-- <span class="sr-only">Menu</span> -->
       </button>
       <nav class="header__navigation">
-        <ul class="header__menu" id="header__menu">
+        <ul class="header__menu" id="header__menu" data-visible="false">
           <li><a href="index.html" class="header__link">home</a></li>
           <li><a href="about.html" class="header__link">about</a></li>
           <li>
