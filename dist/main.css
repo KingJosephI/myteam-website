@@ -47,13 +47,24 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.625rem;
-  -webkit-padding-before: 2.875rem;
-          padding-block-start: 2.875rem;
-  position: relative;
+  padding-inline: 10.3125rem;
+  padding-block: 4.6875rem;
+}
+.header__logo {
+  margin-right: 3.125rem;
 }
 .header__navigation {
+  width: 100%;
+}
+.header__toggle-menu {
   display: none;
+}
+.header__menu {
+  display: flex;
+  gap: 2.5rem;
+}
+.header__menu li:has(.header__contact) {
+  margin-left: auto;
 }
 .header__link {
   color: #ffffff;
@@ -64,90 +75,82 @@ button {
 .header__link:hover {
   color: #f67e7e;
 }
+.header .active-link {
+  color: #f67e7e;
+}
 .header__contact {
   border: 0.125rem solid #ffffff;
   padding: 0.625rem 1.25rem;
   border-radius: 1.25rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .header__contact:hover {
   background-color: #ffffff;
   color: #002529;
 }
-.header__toggle-menu {
-  width: 2.5rem;
-  aspect-ratio: 1;
-  background-image: url("../../assets/icon-hamburger.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;
-}
-.header__toggle-menu:hover {
-  cursor: pointer;
-}
-.header .menu-close {
-  background-image: url("../../assets/icon-close.svg");
-}
-.header:has(.menu-close) .header__navigation {
-  display: block;
-}
-.header__menu {
-  position: fixed;
-  z-index: 1000;
-  inset: 0 0 0 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  transition: transform 350ms ease-out;
-}
-.header__menu[data-visible=true] {
-  transform: translateX(0%);
-}
-.header__toggle-menu {
-  position: absolute;
-  z-index: 9999;
-  background-color: transparent;
-  background-image: url("../../assets/icon-hamburger.svg");
-  background-repeat: no-repeat;
-  width: 2rem;
-  border: 0;
-  aspect-ratio: 1;
-  top: 2rem;
-  right: 2rem;
-}
-.header__toggle-menu[aria-expanded=true] {
-  background-image: url("../../assets/icon-close.svg");
-}
 
 @media screen and (min-width: 43.75rem) {
   .header {
-    gap: 2.5rem;
-    -webkit-padding-before: 4.5rem;
-            padding-block-start: 4.5rem;
     padding-inline: 4.5rem;
-    background-color: #014e56;
-  }
-  .header__toggle-menu {
-    display: none;
-  }
-  .header__navigation {
-    display: block;
-    width: 100%;
-  }
-  .header__menu {
-    position: relative;
-    flex-direction: row;
-    inset-inline-start: 0;
-    transform: translateX(0%);
-  }
-  .header__menu > li:last-of-type {
-    margin-left: auto;
   }
 }
-@media screen and (min-width: 64rem) {
+@media screen and (max-width: 43.6875rem) {
   .header {
-    padding-inline: 10.3125rem;
+    padding-inline: 1.625rem;
+  }
+  .header__toggle-menu {
+    display: block;
+    width: 3.125rem;
+    aspect-ratio: 1;
+    background-image: url("../../assets/icon-hamburger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    z-index: 9999;
+  }
+  .header__toggle-menu:hover {
+    cursor: pointer;
+  }
+  .header__toggle-menu.close {
+    background-image: url("../../assets/icon-close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 4.6875rem;
+    right: 1.5625rem;
+  }
+  .header__navigation {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    background-color: #014e56;
+    box-shadow: rgba(0, 37, 41, 0.595) 0px 8px 24px;
+    z-index: 9000;
+    transition: 0.2s;
+    overflow: hidden;
+    background-image: url("../../assets/bg-pattern-about-1-mobile-nav-1.svg");
+    background-position: bottom right -6.25rem;
+    background-repeat: no-repeat;
+  }
+  .header__navigation.active {
+    opacity: 1;
+  }
+  .header__navigation.active ul {
+    padding-top: 10.3125rem;
+    opacity: 1;
+  }
+  .header__navigation ul {
+    flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    opacity: 0;
   }
 }
 .get-started {
@@ -881,11 +884,11 @@ button {
   font-weight: 600;
 }
 .form__button {
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.75rem;
   color: #004047;
-  padding: 0.9375rem 1.875rem;
+  padding: 0.625rem 1.875rem;
   border-radius: 1.875rem;
   border: none;
   margin-top: 1.3125rem;

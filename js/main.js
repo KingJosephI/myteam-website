@@ -1,3 +1,5 @@
+// Display comment on top of directors' cards in the about page
+
 const toggleComments = document.querySelectorAll('.toggle-comment');
 const comment = document.querySelector('.directors__comment');
 
@@ -7,18 +9,31 @@ toggleComments.forEach((toggleCommentButton) => {
   });
 });
 
-// Responsive menu
+// Handle responsive navbar
+const hamburger = document.querySelector('.header__toggle-menu');
+const navBar = document.querySelector('.header__navigation');
+hamburger.addEventListener('click', () => {
+  navBar.classList.toggle('active');
+  hamburger.classList.toggle('close');
+});
 
-const heroMenu = document.querySelector('.header__menu');
-const toggleMenu = document.querySelector('.header__toggle-menu');
+//Active page
+const menuItems = document.querySelectorAll('.header__link');
 
-toggleMenu.addEventListener('click', () => {
-  const visibility = heroMenu.getAttribute('data-visible');
-  if (visibility === 'false') {
-    heroMenu.setAttribute('data-visible', 'true');
-    toggleMenu.setAttribute('aria-expanded', 'true');
-  } else {
-    heroMenu.setAttribute('data-visible', 'false');
-    toggleMenu.setAttribute('aria-expanded', 'false');
+// Loop through the buttons and add the active class to the current/clicked button
+// for (let i = 0; i < menuItems.length; i++) {
+//   menuItems[i].addEventListener('click', function () {
+//     const current = document.getElementsByClassName('active-link');
+//     current[0].className = current[0].className.replace(' active-link', '');
+//     this.className += ' active-link';
+//     console.log('Joseph');
+//   });
+// }
+
+const activePage = window.location.pathname;
+const navigationLinks = document.querySelectorAll('.header__link');
+navigationLinks.forEach((link) => {
+  if (link.href.includes(`${activePage}`)) {
+    link.classList.add('active-link');
   }
 });
