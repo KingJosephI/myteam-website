@@ -87,7 +87,7 @@
     }
 
     &__navigation {
-      opacity: 0;
+      display: none;
       position: fixed;
       top: 0;
       left: 30%;
@@ -96,7 +96,7 @@
       width: 70vw;
       background-color: $midnight-green;
       box-shadow: rgba(0, 37, 41, 0.595) 0px 8px 24px;
-      z-index: 9000;
+      z-index: 1001;
       transition: 0.2s;
       overflow: hidden;
       @include back-image(
@@ -106,7 +106,7 @@
     }
 
     &__navigation.active {
-      opacity: 1;
+      display: block;
     }
 
     &__navigation.active ul {
