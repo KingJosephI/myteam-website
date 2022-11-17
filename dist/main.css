@@ -75,6 +75,9 @@ button {
 .header__link:hover {
   color: #f67e7e;
 }
+.header .active-link {
+  color: #f67e7e;
+}
 .header__contact {
   border: 0.125rem solid #ffffff;
   padding: 0.625rem 1.25rem;
@@ -104,7 +107,7 @@ button {
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    z-index: 1000;
+    z-index: 9999;
   }
   .header__toggle-menu:hover {
     cursor: pointer;
@@ -127,6 +130,7 @@ button {
     width: 70vw;
     background-color: #014e56;
     box-shadow: rgba(0, 37, 41, 0.595) 0px 8px 24px;
+    z-index: 9000;
     transition: 0.2s;
     overflow: hidden;
     background-image: url("../../assets/bg-pattern-about-1-mobile-nav-1.svg");
