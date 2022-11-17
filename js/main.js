@@ -19,21 +19,16 @@ hamburger.addEventListener('click', () => {
 
 //Active page
 const menuItems = document.querySelectorAll('.header__link');
-
-// Loop through the buttons and add the active class to the current/clicked button
-// for (let i = 0; i < menuItems.length; i++) {
-//   menuItems[i].addEventListener('click', function () {
-//     const current = document.getElementsByClassName('active-link');
-//     current[0].className = current[0].className.replace(' active-link', '');
-//     this.className += ' active-link';
-//     console.log('Joseph');
-//   });
-// }
-
 const activePage = window.location.pathname;
-const navigationLinks = document.querySelectorAll('.header__link');
-navigationLinks.forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add('active-link');
-  }
-});
+
+const navigationLinks = document
+  .querySelectorAll('.header__link')
+  .forEach((link) => {
+    if (link.href.includes(`${activePage}`)) {
+      link.classList.add('active-link');
+    }
+
+    if (activePage === '/') {
+      link.classList.replace('active-link', '');
+    }
+  });

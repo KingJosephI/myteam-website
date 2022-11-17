@@ -121,7 +121,7 @@ button {
     right: 1.5625rem;
   }
   .header__navigation {
-    opacity: 0;
+    display: none;
     position: fixed;
     top: 0;
     left: 30%;
@@ -130,7 +130,7 @@ button {
     width: 70vw;
     background-color: #014e56;
     box-shadow: rgba(0, 37, 41, 0.595) 0px 8px 24px;
-    z-index: 9000;
+    z-index: 1001;
     transition: 0.2s;
     overflow: hidden;
     background-image: url("../../assets/bg-pattern-about-1-mobile-nav-1.svg");
@@ -138,7 +138,7 @@ button {
     background-repeat: no-repeat;
   }
   .header__navigation.active {
-    opacity: 1;
+    display: block;
   }
   .header__navigation.active ul {
     padding-top: 10.3125rem;
@@ -623,16 +623,15 @@ button {
   border-radius: 50%;
   border: 0.125rem solid #79c8c7;
 }
-.directors__card .toggle-comment {
+.directors .toggle-comment {
   position: absolute;
   left: 0;
   right: 0;
+  bottom: -1.75rem;
   margin: 0 auto;
   width: 3.5rem;
   aspect-ratio: 1;
-  background-color: #f67e7e;
   border-radius: 50%;
-  bottom: -1.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -640,13 +639,17 @@ button {
   background-image: url("../../../assets/icon-plus.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #f67e7e;
   z-index: 1000;
 }
-.directors__card .close-button {
+.directors .toggle-comment:hover {
+  cursor: pointer;
+}
+.directors .close-button {
   background-image: url("../../../assets/icon-close.svg");
   background-color: #79c8c7;
 }
-.directors__card .close-button:hover {
+.directors .close-button:hover {
   cursor: pointer;
 }
 .directors__name {
@@ -723,9 +726,6 @@ button {
   }
   .directors__list {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .directors__card {
-    width: 100%;
   }
   .directors__title {
     font-size: 3rem;

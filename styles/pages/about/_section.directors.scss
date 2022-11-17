@@ -36,36 +36,73 @@
       border: rem(2) solid $rapture-blue;
     }
 
-    .toggle-comment {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: rem(56);
-      aspect-ratio: 1;
-      background-color: $light-coral;
-      border-radius: 50%;
+    // .toggle-comment {
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: rem(-28);
+    //   margin: 0 auto;
+    //   width: rem(56);
+    //   aspect-ratio: 1;
+    //   border-radius: 50%;
 
-      bottom: rem(-28);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: rem(24);
-      background-image: url('../../../assets/icon-plus.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: 1000;
-    }
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size: rem(24);
+    //   background-image: url('../../../assets/icon-plus.svg');
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-color: $light-coral;
+    //   z-index: 1000;
 
-    .close-button {
-      background-image: url('../../../assets/icon-close.svg');
-      background-color: $rapture-blue;
-      &:hover {
-        cursor: pointer;
-      }
+    //   &:hover {
+    //     cursor: pointer;
+    //     // background-color: #f15656;
+    //   }
+    // }
+
+    // .close-button {
+    //   background-image: url('../../../assets/icon-close.svg');
+    //   background-color: $rapture-blue;
+    //   &:hover {
+    //     cursor: pointer;
+    //   }
+    // }
+  }
+  .toggle-comment {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem(-28);
+    margin: 0 auto;
+    width: rem(56);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(24);
+    background-image: url('../../../assets/icon-plus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $light-coral;
+    z-index: 1000;
+
+    &:hover {
+      cursor: pointer;
+      // background-color: #f15656;
     }
   }
 
+  .close-button {
+    background-image: url('../../../assets/icon-close.svg');
+    background-color: $rapture-blue;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &__name {
     font-size: rem(18);
     line-height: rem(28);
@@ -153,10 +190,6 @@
 
     &__list {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    &__card {
-      width: 100%;
     }
 
     &__title {
