@@ -48,7 +48,8 @@ button {
   justify-content: space-between;
   align-items: center;
   padding-inline: 10.3125rem;
-  padding-block: 4.6875rem;
+  -webkit-padding-before: 4.6875rem;
+          padding-block-start: 4.6875rem;
 }
 .header__logo {
   margin-right: 3.125rem;
@@ -89,7 +90,7 @@ button {
   color: #002529;
 }
 
-@media screen and (min-width: 43.75rem) {
+@media screen and (min-width: 43.75rem) and (max-width: 63.9375rem) {
   .header {
     padding-inline: 4.5rem;
   }
@@ -122,6 +123,9 @@ button {
   }
   .header__navigation {
     display: none;
+  }
+  .header__navigation.active {
+    display: block;
     position: fixed;
     top: 0;
     left: 30%;
@@ -136,9 +140,6 @@ button {
     background-image: url("../../assets/bg-pattern-about-1-mobile-nav-1.svg");
     background-position: bottom right -6.25rem;
     background-repeat: no-repeat;
-  }
-  .header__navigation.active {
-    display: block;
   }
   .header__navigation.active ul {
     padding-top: 10.3125rem;

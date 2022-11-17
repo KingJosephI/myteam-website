@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: $desktop-padding-inline;
-  padding-block: rem(75);
+  padding-block-start: rem(75);
 
   &__logo {
     margin-right: rem(50);
@@ -54,7 +54,7 @@
     }
   }
 }
-@media screen and (min-width: rem(700)) {
+@media screen and (min-width: rem(700)) and (max-width: rem(1023)) {
   .header {
     padding-inline: $tablet-padding-inline;
   }
@@ -88,6 +88,10 @@
 
     &__navigation {
       display: none;
+    }
+
+    &__navigation.active {
+      display: block;
       position: fixed;
       top: 0;
       left: 30%;
@@ -103,10 +107,6 @@
         '../../assets/bg-pattern-about-1-mobile-nav-1.svg',
         bottom right rem(-100)
       );
-    }
-
-    &__navigation.active {
-      display: block;
     }
 
     &__navigation.active ul {
